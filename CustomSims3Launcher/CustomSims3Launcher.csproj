@@ -5,10 +5,21 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>The Sims 3.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WPF-UI" Version="1.2.7" />
+    <None Remove="The Sims 3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="The Sims 3.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="The Sims 3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

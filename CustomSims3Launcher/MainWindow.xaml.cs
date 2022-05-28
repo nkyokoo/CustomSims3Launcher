@@ -61,10 +61,6 @@ namespace CustomSims3Launcher
                     key.Close();
                 }
             }
-            WPFUI.Appearance.Background.Apply(
-                  this,                                // Window class
-                  WPFUI.Appearance.BackgroundType.Mica // Background type
-            );
             InitializeComponent();
             skipLauncherCheck.DataContext = this;
             installedLabel.Content = IsInstalled ? "Game is installed" : "";
@@ -192,6 +188,16 @@ namespace CustomSims3Launcher
             }
 
             return false;
+        }
+
+        private void minimise_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void close_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
