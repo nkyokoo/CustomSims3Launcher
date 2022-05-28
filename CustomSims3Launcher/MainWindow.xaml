@@ -1,0 +1,41 @@
+﻿<Window x:Class="CustomSims3Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomSims3Launcher" xmlns:wpfui="http://schemas.lepo.co/wpfui/2022/xaml"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" FontFamily="Roboto" WindowStyle="SingleBorderWindow">
+    <Grid>
+        <TabControl Background="#FF141414">
+            <TabItem Header="Main page" FontFamily="Roboto" Background="Black" Foreground="White" BorderBrush="Black">
+                <Grid Background="#FF1E1E1E">
+                    <Grid Grid.ColumnSpan="4">
+                        <Label Content="The sims 3 launcher" Margin="253,10,236,0" VerticalAlignment="Top" Height="42" FontSize="30" FontFamily="Roboto" FontStyle="Normal" Foreground="White"/>
+                        <wpfui:Button Content="Launch game" HorizontalAlignment="Center" Margin="0,82,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="1.459,0.86" Background="#FFF44A4A" Foreground="White" BorderBrush="#FFF44A4A" Height="26" Width="82" Appearance="Dark">
+                       
+                        </wpfui:Button>
+                        <CheckBox x:Name="skipLauncherCheck" Content="Skip original launcher&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,131,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=SkipLauncher, Mode=TwoWay}" Foreground="White" RenderTransformOrigin="0.791,0.577" Width="140">
+
+                        </CheckBox>
+                    </Grid>
+                    <Image HorizontalAlignment="Left" Height="39" Margin="10,40,0,0" VerticalAlignment="Top" Width="53"/>
+                    <Grid HorizontalAlignment="Left" Width="239" Grid.ColumnSpan="3">
+                        <Label Background="#FF262626" Margin="0,0,69,0" >
+                            <Label Content="Installed Sims 3 packs&#xD;&#xA;" Width="134" Height="26" FontFamily="Roboto" Foreground="White"/>
+                        </Label>
+                        <ListBox SelectionChanged="ListBox_SelectionChanged" Margin="0,42,69,0" Background="#FF313131" Foreground="White" BorderBrush="#FF313131">
+                            <Grid></Grid>
+                        </ListBox>
+
+                    </Grid>
+                    <Label x:Name="installedLabel" Content="" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Foreground="White"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Mods" FontFamily="Roboto" Foreground="White">
+                <Grid Background="#FF1E1E1E"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
